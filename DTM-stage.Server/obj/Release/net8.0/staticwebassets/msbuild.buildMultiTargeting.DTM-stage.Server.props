@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\DTM-stage.Server.props" />
+</Project>
