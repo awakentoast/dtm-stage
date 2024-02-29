@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\DTM-stage.Server.props" />
-</Project>
