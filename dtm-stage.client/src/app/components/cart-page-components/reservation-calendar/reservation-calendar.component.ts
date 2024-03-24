@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 
 @Component({
   selector: 'app-reservation-calendar',
@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './reservation-calendar.component.html',
   styleUrl: './reservation-calendar.component.css'
+})
+@Injectable({
+  providedIn: "root"
 })
 export class ReservationCalendarComponent {
 

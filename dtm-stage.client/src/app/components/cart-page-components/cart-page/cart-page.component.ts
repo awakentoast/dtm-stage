@@ -14,7 +14,4 @@ export class CartPageComponent {
   constructor(private cartProduct: CartPageProductOverviewComponent, 
               private reservationCalendar: ReservationCalendarComponent) {
   }
-
-  
-
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 
 @Component({
   selector: 'app-cart-page-product-overview',
@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './cart-page-product-overview.component.html',
   styleUrl: './cart-page-product-overview.component.css'
+})
+@Injectable({
+  providedIn: "root"
 })
 export class CartPageProductOverviewComponent {
 
