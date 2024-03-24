@@ -1,0 +1,28 @@
+.product-tiles-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    padding: 20px;
+}
+
+.product-tile {
+    height: 300px;
+    border-style: solid;
+    border-radius: 5px;
+    user-select: none;
+    text-decoration: none;
+} 
+
+.product-image {
+    max-width: 100%;
+    max-height: 60%;
+    justify-content: center;
+    display: block;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}

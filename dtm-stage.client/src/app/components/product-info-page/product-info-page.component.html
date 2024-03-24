@@ -1,0 +1,9 @@
+@if(product | async; as product) {
+<div class="container">
+    <div class="left-container">
+        @for(image of product.images; track image.id) {   
+            <img width="100%" src="assets\product-images\{{image.imagePath}}" [alt]="image.altText" />
+        }
+    </div>
+</div>
+}
