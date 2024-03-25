@@ -5,9 +5,11 @@
   import { Image } from '../../models/image';
   import { CommonModule } from '@angular/common';
   import { Observable } from 'rxjs';
+import { RouterModule } from '@angular/router';
 
   @Component({
-    imports: [CommonModule],
+    imports: [CommonModule,
+    RouterModule],
     standalone: true,
     selector: 'product-tiles',
     templateUrl: './product-tile.component.html',

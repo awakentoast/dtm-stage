@@ -2,7 +2,7 @@
     <div class="product-tiles-container">
         @for(product of products$ | async; track product.id) {
         <div class="product-tile">
-            <a href="product/{{ product.id }}">
+            <a [routerLink]="['/product/' + product.id]" >
                 <img class="product-image" src="assets\product-images\{{ product.images[0].imagePath }}" alt="{{ product.images[0].altText }}">
                 <h1>{{ product.name }}</h1>
                 <h2>{{ product.description }}</h2> 
