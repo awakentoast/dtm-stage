@@ -16,21 +16,20 @@ import { RouterModule } from '@angular/router';
   templateUrl: './product-tile.component.html',
   styleUrl: './product-tile.component.css'
 })
-
 export class ProductTileComponent implements OnInit {
   public products$: Observable<Product[]> = new Observable<Product[]>;
 
   constructor(private productService: ProductService,
               private cartService: CartService) { }
-
+  
   ngOnInit(): void {
     this.products$ = this.productService.getProducts()
   }
-
+  
   public addProductToCart(product: Product): void {
     this.cartService.addProductToCart(product);
   }
-
+  
   AddProduct(): void {
     console.log("a");
     this.productService.addProduct(new Product(

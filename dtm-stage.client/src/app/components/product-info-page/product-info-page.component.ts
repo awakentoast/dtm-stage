@@ -30,21 +30,7 @@ export class ProductInfoPageComponent implements OnInit {
       } else {
         const productId = parseInt(productIdString, 10);      
                 
-        const productOrUndefined = this.productService.getProduct(productId);
-        let productWasUndefined: boolean = false
-        productOrUndefined.forEach(product => {
-          if (product == undefined) {
-            productWasUndefined = true;
-          }
-        })
-        
-        if (productWasUndefined) {
-          console.error("there should have been a product");
-        } else {
-          this.product = productOrUndefined;
-        }
-
-        console.log(this.product);
+        this.product = this.productService.getProduct(productId);
       }
     });
   }
