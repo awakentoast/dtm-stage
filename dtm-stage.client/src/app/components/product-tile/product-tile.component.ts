@@ -24,12 +24,6 @@ export class ProductTileComponent implements OnInit {
               private cartService: CartService) { }
 
   ngOnInit(): void {
-    // this.productService.subscribeToProducts({
-    //   next: product => this.products.push(product),
-    //   error: err => console.log(err),
-    //   complete: () => console.log("observer completed"),
-    // });
-
     this.products$ = this.productService.getProducts()
   }
 

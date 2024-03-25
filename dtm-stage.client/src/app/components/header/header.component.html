@@ -1,4 +1,10 @@
 <div class="header">
-    <img class="logo" src="assets\dtm-logo.png" alt="app logo">
-    <p>A</p>
+    <a routerLink="/">
+        <img class="logo" src="assets/dtm-logo.png" alt="app logo">
+    </a>
+    <a [routerLink]="['/cart']">
+        <div class="cartRedirect">
+            <p>Cart</p>
+        </div>
+    </a>
 </div>

@@ -10,13 +10,14 @@
 .product-tile {
     height: 300px;
     border-style: solid;
+    max-width: 500px;
     border-radius: 5px;
     user-select: none;
     text-decoration: none;
 } 
 
 .product-image {
-    max-width: 100%;
+    max-width: 90%;
     max-height: 60%;
     justify-content: center;
     display: block;
