@@ -1,1 +1,5 @@
-<p>cart-page-product-overview works!</p>
+<ul>
+    @for(cartProductEntry of cartProducts$ | async |keyvalue ; track cartProductEntry.key) {
+    <li>{{cartProductEntry.key}}: {{cartProductEntry.value}}</li>
+    }
+</ul>

@@ -5,9 +5,12 @@ import { Item } from '../../models/item';
 import { Image } from '../../models/image';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
+import { CartService } from '../../services/cart.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
-  imports: [CommonModule],
+  imports: [CommonModule,
+  RouterModule],
   standalone: true,
   selector: 'product-tiles',
   templateUrl: './product-tile.component.html',
@@ -17,7 +20,8 @@ import { Observable } from 'rxjs';
 export class ProductTileComponent implements OnInit {
   public products$: Observable<Product[]> = new Observable<Product[]>;
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService,
+              private cartService: CartService) { }
 
   ngOnInit(): void {
     // this.productService.subscribeToProducts({
@@ -27,6 +31,10 @@ export class ProductTileComponent implements OnInit {
     // });
 
     this.products$ = this.productService.getProducts()
+  }
+
+  public addProductToCart(product: Product): void {
+    this.cartService.addProductToCart(product);
   }
 
   AddProduct(): void {
